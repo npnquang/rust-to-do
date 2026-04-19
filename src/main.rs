@@ -5,6 +5,17 @@ use ratatui::{
     widgets::{Paragraph, Widget},
 };
 
+#[derive(Debug, Default)]
+struct AppState {
+    todo_items: Vec<TodoItem>,
+}
+
+#[derive(Debug, Default)]
+struct TodoItem {
+    is_done: bool,
+    description: String,
+}
+
 fn main() -> Result<()> {
     // Install color_eyre for enhanced error reporting.
     color_eyre::install()?;
