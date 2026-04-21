@@ -47,7 +47,7 @@ fn run(mut terminal: DefaultTerminal, app_state: &mut AppState) -> Result<()> {
             // Handle key events here. For example, you could check for specific keys to exit the loop.
             match key.code {
                 // Exit the app
-                event::KeyCode::Esc => {
+                event::KeyCode::Esc | event::KeyCode::Char('q') => {
                     break;
                 }
                 _ => {}
